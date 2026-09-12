@@ -1,29 +1,29 @@
-const toggle = document.querySelector('.nav-toggle');
-const links = document.querySelector('.nav-links');
+const toggle = document.querySelector(".nav-toggle");
+const links = document.querySelector(".nav-links");
 
 if (toggle && links) {
 
-  toggle.addEventListener('click', () => {
+  toggle.addEventListener("click", () => {
 
-    const open = links.classList.toggle('open');
+    const isOpen = links.classList.toggle("open");
 
     toggle.setAttribute(
-      'aria-expanded',
-      String(open)
+      "aria-expanded",
+      String(isOpen)
     );
 
   });
 
 
-  links.querySelectorAll('a').forEach((link) => {
+  links.querySelectorAll("a").forEach((link) => {
 
-    link.addEventListener('click', () => {
+    link.addEventListener("click", () => {
 
-      links.classList.remove('open');
+      links.classList.remove("open");
 
       toggle.setAttribute(
-        'aria-expanded',
-        'false'
+        "aria-expanded",
+        "false"
       );
 
     });
